@@ -49,7 +49,7 @@ class Home extends React.Component {
 
   handleOk = () => {
     const item = {
-      id: this.state.items[this.state.items.length - 1].id + 1,
+      id: this.state.items.length !== 0 ? this.state.items[this.state.items.length - 1].id + 1 : 1,
       name: this.state.name,
       description: this.state.description,
     };
